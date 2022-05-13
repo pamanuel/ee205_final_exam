@@ -10,3 +10,27 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "Rectangle.h"
+
+Rectangle::Rectangle(const double newLength, const double newWidth) {
+
+}
+
+double Rectangle::getLength() {
+    return 0;
+}
+
+double Rectangle::getWidth() {
+    return 0;
+}
+
+bool Rectangle::validateLength() {
+    return false;
+}
+
+bool Rectangle::validateWidth() {
+    return false;
+}
+
+double Rectangle::compute_area() const noexcept {
+    return length * width ;
+}
