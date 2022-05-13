@@ -13,7 +13,10 @@
 #include "Rectangle.h"
 class Square: public Rectangle{
 public:
-    Square(const double newSide):Rectangle(newSide, newSide){};
+    Square(const double newSide):Rectangle(newSide, newSide){
+        length = newSide;
+        width  = newSide;
+    };
 public:
     double getSide() const noexcept;
 };

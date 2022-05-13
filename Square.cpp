@@ -12,5 +12,5 @@
 #include "Square.h"
 
 double Square::getSide() const noexcept {
-    return 0;
+    return length;
 }
