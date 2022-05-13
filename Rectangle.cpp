@@ -8,27 +8,40 @@
 /// @author @Patrick Manuel <pamanuel@hawaii.edu>
 /// @date   13_May_2022
 ///////////////////////////////////////////////////////////////////////////////
-
+#include <iostream>
 #include "Rectangle.h"
 
 Rectangle::Rectangle(const double newLength, const double newWidth) {
-
+    if(!Rectangle::validateLength(newLength)){
+        throw std::invalid_argument ("Length must be > 0");
+    }
+    if(!Rectangle::validateWidth(newWidth)){
+        throw std::invalid_argument ("Length must be > 0");
+    }
+    length = newLength;
+    width  = newWidth;
 }
 
 double Rectangle::getLength() {
-    return 0;
+    return length;
 }
 
 double Rectangle::getWidth() {
-    return 0;
+    return width;
 }
 
-bool Rectangle::validateLength() {
-    return false;
+bool Rectangle::validateLength(const double length) {
+    if(length <= 0){
+        return false;
+    }
+    return true;
 }
 
-bool Rectangle::validateWidth() {
-    return false;
+bool Rectangle::validateWidth(const double width) {
+    if(width <= 0){
+        return false;
+    }
+    return true;
 }
 
 double Rectangle::compute_area() const noexcept {

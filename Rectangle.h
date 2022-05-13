@@ -21,8 +21,8 @@ public:
     double getLength();
     double getWidth();
 public:
-    static bool validateLength();
-    static bool validateWidth();
+    static bool validateLength( const double length);
+    static bool validateWidth( const double width);
 public:
     double compute_area() const noexcept override;
 };
